@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <appSettings xdt:Transform="InsertIfMissing">
+    <add key="FileLoggerEnabled" value="true" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
+    <add key="ConsoleLoggerEnabled" value="true" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
+    <add key="ConfigFileRelativePath" value="log4net.config" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
+  </appSettings>
+</configuration>
