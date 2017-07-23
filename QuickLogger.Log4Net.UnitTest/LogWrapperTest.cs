@@ -10,12 +10,14 @@ namespace QuickLogger.Log4Net.UnitTest
     public class BaseLog4NetTest
     {
         private readonly string _loggerDirectory = $"C:\\Logger\\{AppDomain.CurrentDomain.FriendlyName.Replace(":", "-")}";
-
         private readonly string filePath = "log4net.config";
+
+        private BaseLog4NetLogger _logWrapper;
 
         [TestCleanup]
         public void QuickLogger_Log4Net_UnitTest__BaseLog4NetTest__Cleanup()
         {
+            _logWrapper?.Stop();
             if (Directory.Exists(_loggerDirectory))
             {
                 Directory.Delete(_loggerDirectory, true);
@@ -28,8 +30,9 @@ namespace QuickLogger.Log4Net.UnitTest
             // Act
             Task task = new Task(() =>
                                  {
-                                     BaseLog4NetLogger wraper = new FileLogger(filePath);
-                                     wraper.Debug("Some Info");
+                                     _logWrapper = new FileLogger(filePath);
+                                     _logWrapper.Debug("Some Info");
+                                     _logWrapper.Stop();
                                  });
             task.Start();
             task.Wait();
@@ -46,15 +49,13 @@ namespace QuickLogger.Log4Net.UnitTest
             // Act
             Task task = new Task(() =>
                                  {
-                                     BaseLog4NetLogger wraper = new FileLogger(filePath);
-                                     wraper.DebugAsync("Some Info");
+                                     _logWrapper = new FileLogger(filePath);
+                                     _logWrapper.DebugAsync("Some Info");
+                                     Thread.Sleep(1000);
+                                     _logWrapper.Stop();
                                  });
             task.Start();
             task.Wait();
-
-            // Async debug işlemi sebebiyle test sonucu yanlış çıkabilir.
-            // Thread işlemini bir saniye bekletmek Log işleminin tamamlanması için yeterli olmayabilir.
-            Thread.Sleep(1000);
 
             // Assert
             string logFileName = DateTime.Now.ToString("yyyy-MM-dd") + ".log";
@@ -69,8 +70,9 @@ namespace QuickLogger.Log4Net.UnitTest
             // Act
             Task task = new Task(() =>
                                  {
-                                     BaseLog4NetLogger wraper = new FileLogger(filePath);
-                                     wraper.Info("Some Info");
+                                     _logWrapper = new FileLogger(filePath);
+                                     _logWrapper.Info("Some Info");
+                                     _logWrapper.Stop();
                                  });
             task.Start();
             task.Wait();
@@ -87,15 +89,13 @@ namespace QuickLogger.Log4Net.UnitTest
             // Act
             Task task = new Task(() =>
                                  {
-                                     BaseLog4NetLogger wraper = new FileLogger(filePath);
-                                     wraper.InfoAsync("Some Info");
+                                     _logWrapper = new FileLogger(filePath);
+                                     _logWrapper.InfoAsync("Some Info");
+                                     Thread.Sleep(1000);
+                                     _logWrapper.Stop();
                                  });
             task.Start();
             task.Wait();
-
-            // Async info işlemi sebebiyle test sonucu yanlış çıkabilir.
-            // Thread işlemini bir saniye bekletmek Log işleminin tamamlanması için yeterli olmayabilir.
-            Thread.Sleep(1000);
 
             // Assert
             string logFileName = DateTime.Now.ToString("yyyy-MM-dd") + ".log";
@@ -109,8 +109,9 @@ namespace QuickLogger.Log4Net.UnitTest
             // Act
             Task task = new Task(() =>
                                  {
-                                     BaseLog4NetLogger wraper = new FileLogger(filePath);
-                                     wraper.Error(new Exception("Test exception"));
+                                     _logWrapper = new FileLogger(filePath);
+                                     _logWrapper.Error(new Exception("Test exception"));
+                                     _logWrapper.Stop();
                                  });
             task.Start();
             task.Wait();
@@ -127,15 +128,13 @@ namespace QuickLogger.Log4Net.UnitTest
             // Act
             Task task = new Task(() =>
                                  {
-                                     BaseLog4NetLogger wraper = new FileLogger(filePath);
-                                     wraper.ErrorAsync(new Exception("Test exception"));
+                                     _logWrapper = new FileLogger(filePath);
+                                     _logWrapper.ErrorAsync(new Exception("Test exception"));
+                                     Thread.Sleep(1000);
+                                     _logWrapper.Stop();
                                  });
             task.Start();
             task.Wait();
-
-            // Async error işlemi sebebiyle test sonucu yanlış çıkabilir.
-            // Thread işlemini bir saniye bekletmek Log işleminin tamamlanması için yeterli olmayabilir.
-            Thread.Sleep(1000);
 
             // Assert
             string logFileName = DateTime.Now.ToString("yyyy-MM-dd") + ".log";
@@ -149,8 +148,9 @@ namespace QuickLogger.Log4Net.UnitTest
             // Act
             Task task = new Task(() =>
                                  {
-                                     BaseLog4NetLogger wraper = new FileLogger(filePath);
-                                     wraper.Error("Some Info", new Exception("Test exception"));
+                                     _logWrapper = new FileLogger(filePath);
+                                     _logWrapper.Error("Some Info", new Exception("Test exception"));
+                                     _logWrapper.Stop();
                                  });
             task.Start();
             task.Wait();
@@ -167,15 +167,13 @@ namespace QuickLogger.Log4Net.UnitTest
             // Act
             Task task = new Task(() =>
                                  {
-                                     BaseLog4NetLogger wraper = new FileLogger(filePath);
-                                     wraper.ErrorAsync("Some Info", new Exception("Test exception"));
+                                     _logWrapper = new FileLogger(filePath);
+                                     _logWrapper.ErrorAsync("Some Info", new Exception("Test exception"));
+                                     Thread.Sleep(1000);
+                                     _logWrapper.Stop();
                                  });
             task.Start();
             task.Wait();
-
-            // Async error işlemi sebebiyle test sonucu yanlış çıkabilir.
-            // Thread işlemini bir saniye bekletmek Log işleminin tamamlanması için yeterli olmayabilir.
-            Thread.Sleep(1000);
 
             // Assert
             string logFileName = DateTime.Now.ToString("yyyy-MM-dd") + ".log";
@@ -189,8 +187,9 @@ namespace QuickLogger.Log4Net.UnitTest
             // Act
             Task task = new Task(() =>
                                  {
-                                     BaseLog4NetLogger wraper = new FileLogger(filePath);
-                                     wraper.Error("Some Info", null);
+                                     _logWrapper = new FileLogger(filePath);
+                                     _logWrapper.Error("Some Info", null);
+                                     _logWrapper.Stop();
                                  });
             task.Start();
             task.Wait();
@@ -207,15 +206,13 @@ namespace QuickLogger.Log4Net.UnitTest
             // Act
             Task task = new Task(() =>
                                  {
-                                     BaseLog4NetLogger wraper = new FileLogger(filePath);
-                                     wraper.ErrorAsync("Some Info", null);
+                                     _logWrapper = new FileLogger(filePath);
+                                     _logWrapper.ErrorAsync("Some Info", null);
+                                     Thread.Sleep(1000);
+                                     _logWrapper.Stop();
                                  });
             task.Start();
             task.Wait();
-
-            // Async error işlemi sebebiyle test sonucu yanlış çıkabilir.
-            // Thread işlemini bir saniye bekletmek Log işleminin tamamlanması için yeterli olmayabilir.
-            Thread.Sleep(1000);
 
             // Assert
             string logFileName = DateTime.Now.ToString("yyyy-MM-dd") + ".log";

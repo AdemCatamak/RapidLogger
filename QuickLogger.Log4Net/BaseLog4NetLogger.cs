@@ -11,7 +11,7 @@ namespace QuickLogger.Log4Net
         protected BaseLog4NetLogger(string filePath, string appenderName)
         {
             if (!File.Exists(filePath))
-                throw new FileNotFoundException($"There is not file at {filePath} ");
+                throw new FileNotFoundException($"There is not file at {filePath}");
 
 
             log4net.GlobalContext.Properties["SolutionName"] = AppDomain.CurrentDomain.FriendlyName.Replace(":", "-");
@@ -44,34 +44,39 @@ namespace QuickLogger.Log4Net
 
         public void Warning(string message)
         {
-            throw new NotImplementedException();
+            _logger.Warn(message);
         }
 
         public void WarningAsync(string message)
         {
-            throw new NotImplementedException();
+            Task.Run(() => { Warning(message); });
         }
 
         public void Error(Exception exception)
         {
-            throw new NotImplementedException();
+            _logger.Error(exception);
         }
 
         public void ErrorAsync(Exception exception)
         {
-            throw new NotImplementedException();
+            Task.Run(() => { Error(exception); });
         }
 
         public void Error(string message, Exception exception)
         {
-            throw new NotImplementedException();
+            _logger.Error(message, exception);
         }
 
         public void ErrorAsync(string message, Exception exception)
         {
-            throw new NotImplementedException();
+            Task.Run(() => { Error(message, exception); });
         }
 
         public bool IsEnabled { get; set; }
+
+        public void Stop()
+        {
+            log4net.LogManager.Shutdown();
+        }
     }
 }

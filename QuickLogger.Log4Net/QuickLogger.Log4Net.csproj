@@ -50,8 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="QuickLogger.Log4Net.nuspec" />
-    <None Include="Content\app.config.install.xdt" />
-    <None Include="Content\web.config.install.xdt" />
     <None Include="Content\log4net.config" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -60,6 +58,9 @@
       <Project>{AA3DB56F-36E0-4BD2-96FE-05250977519A}</Project>
       <Name>QuickLogger</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENCE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

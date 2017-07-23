@@ -7,11 +7,11 @@
     <title>QuickLogger.Log4Net</title>
     <authors>Adem Catamak</authors>
     <owners>Adem Catamak</owners>
-    <licenseUrl><![CDATA[https://bitbucket.org/ademcatamak/ademcatamak.logger/commits/1b36a8d0097967f2eb0ab15b63a1da149ad32e5f]]></licenseUrl>
-    <projectUrl>https://bitbucket.org/ademcatamak/ademcatamak.logger/wiki/Home</projectUrl>
+    <licenseUrl><![CDATA[https://bitbucket.org/ademcatamak/quicklogger.Log4Net]]></licenseUrl>
+    <projectUrl>https://bitbucket.org/ademcatamak/quicklogger/wiki/Home</projectUrl>
     <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>Logger Wrapper</description>
+    <description>Quick Logger with Log4Net</description>
     <releaseNotes></releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>Logger</tags>
@@ -23,7 +23,5 @@
   <files>
     <file src="bin\Release\QuickLogger.Log4Net.dll" target="lib\net45"></file>
     <file src="bin\Release\Content\log4net.config" target="content"></file>
-    <file src="bin\Release\Content\app.config.install.xdt" target="content"></file>
-    <file src="bin\Release\Content\web.config.install.xdt" target="content"></file>
   </files>
 </package>

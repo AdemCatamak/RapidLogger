@@ -44,5 +44,11 @@
     <Compile Include="LoggerMaestro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="QuickLogger.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENCE.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<package>
+  <metadata>
+    <id>QuickLogger</id>
+    <version>1.0.0</version>
+    <title>QuickLogger</title>
+    <authors>Adem Catamak</authors>
+    <owners>Adem Catamak</owners>
+    <licenseUrl><![CDATA[https://bitbucket.org/ademcatamak/quicklogger]]></licenseUrl>
+    <projectUrl>https://bitbucket.org/ademcatamak/quicklogger/wiki/Home</projectUrl>
+    <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Logger Wrapper</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Logger</tags>
+  </metadata>
+</package>
