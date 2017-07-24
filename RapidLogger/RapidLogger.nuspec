@@ -3,17 +3,24 @@
 <package>
   <metadata>
     <id>RapidLogger</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>Rapid Logger</title>
     <authors>Adem Catamak</authors>
     <owners>Adem Catamak</owners>
-    <licenseUrl><![CDATA[https://bitbucket.org/ademcatamak/quicklogger/src/3252db138f14ee1dec42169666c668167d607e63/QuickLogger/LICENCE.txt?at=master&fileviewer=file-view-default]]></licenseUrl>
-    <projectUrl>https://bitbucket.org/ademcatamak/quicklogger/wiki/Home</projectUrl>
+    <licenseUrl><![CDATA[https://bitbucket.org/ademcatamak/rapidlogger/src/42932a356b7f6745206358c94ba9af65b0a0ffaa/RapidLogger/LICENCE.txt?at=master&fileviewer=file-view-default]]></licenseUrl>
+    <projectUrl>https://bitbucket.org/ademcatamak/rapidlogger/wiki/Home</projectUrl>
     <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>Logger Wrapper</description>
+    <description>Logger Wrapper for RapidLogger Extensions</description>
     <releaseNotes></releaseNotes>
     <copyright>Copyright 2017</copyright>
-    <tags>Logger</tags>
+    <tags>log,logger,log wrapper</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" />
+      <frameworkAssembly assemblyName="System.Collections.Generic" />
+    </frameworkAssemblies>
+    <files>
+      <file src="bin\Release\RapidLogger.dll" target="lib\net45"></file>
+    </files>
   </metadata>
 </package>
