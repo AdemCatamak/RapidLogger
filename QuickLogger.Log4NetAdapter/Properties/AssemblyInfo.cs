@@ -1,14 +1,15 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("QuickLogger.Log4Net")]
+[assembly: AssemblyTitle("QuickLogger.Log4NetAdapter")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("QuickLogger.Log4Net")]
+[assembly: AssemblyProduct("QuickLogger.Log4NetAdapter")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("21f9a264-efb3-4e75-b85f-111b343b650c")]
+[assembly: Guid("6fd2baea-7661-4832-9029-de67ad8e968f")]
 
 // Version information for an assembly consists of the following four values:
 //

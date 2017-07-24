@@ -1,25 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace QuickLogger.Log4Net
+namespace QuickLogger.NLogAdapter
 {
-    public abstract class BaseLog4NetLogger : ILogEngine
+    public abstract class BaseNLogLogger : ILogEngine
     {
-        private readonly log4net.ILog _logger;
+        private readonly NLog.ILogger _logger;
+        public bool IsEnabled { get; set; }
 
-        protected BaseLog4NetLogger(string filePath, string appenderName)
+        protected BaseNLogLogger(string filePath, string appenderName)
         {
             if (!File.Exists(filePath))
                 throw new FileNotFoundException($"There is not file at {filePath}");
 
-
-            log4net.GlobalContext.Properties["SolutionName"] = AppDomain.CurrentDomain.FriendlyName.Replace(":", "-");
+            string solutionName = AppDomain.CurrentDomain.FriendlyName.Replace(":", "-");
+            NLog.GlobalDiagnosticsContext.Set("SolutionName", solutionName);
 
             FileInfo configFileInfo = new FileInfo(filePath);
-            log4net.Config.XmlConfigurator.ConfigureAndWatch(configFileInfo);
+            NLog.LogManager.Configuration = new NLog.Config.XmlLoggingConfiguration(filePath, true);
 
-            _logger = log4net.LogManager.GetLogger(appenderName);
+            _logger = NLog.LogManager.GetLogger(appenderName);
         }
 
         public void Debug(string message)
@@ -64,7 +68,7 @@ namespace QuickLogger.Log4Net
 
         public void Error(string message, Exception exception)
         {
-            _logger.Error(message, exception);
+            _logger.Error(exception, message);
         }
 
         public void ErrorAsync(string message, Exception exception)
@@ -72,11 +76,9 @@ namespace QuickLogger.Log4Net
             Task.Run(() => { Error(message, exception); });
         }
 
-        public bool IsEnabled { get; set; }
-
         public void Stop()
         {
-            log4net.LogManager.Shutdown();
+            NLog.LogManager.Shutdown();
         }
     }
 }

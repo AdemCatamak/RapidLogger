@@ -3,9 +3,8 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using QuickLogger.Log4NetAdapter;
 
-namespace QuickLogger.Log4Net.UnitTest
+namespace QuickLogger.Log4NetAdapter.UnitTest
 {
     [TestClass]
     public class BaseLog4NetTest
@@ -16,7 +15,7 @@ namespace QuickLogger.Log4Net.UnitTest
         private BaseLog4NetLogger _logWrapper;
 
         [TestCleanup]
-        public void QuickLogger_Log4Net_UnitTest__BaseLog4NetTest__Cleanup()
+        public void QuickLogger_Log4NetAdapter_UnitTest__BaseLog4NetTest__Cleanup()
         {
             _logWrapper?.Stop();
             if (Directory.Exists(_loggerDirectory))
@@ -26,7 +25,7 @@ namespace QuickLogger.Log4Net.UnitTest
         }
 
         [TestMethod]
-        public void QuickLogger_Log4Net_UnitTest__BaseLog4NetTest__Debug()
+        public void QuickLogger_Log4NetAdapter_UnitTest__BaseLog4NetTest__Debug()
         {
             // Act
             Task task = new Task(() =>
@@ -45,7 +44,7 @@ namespace QuickLogger.Log4Net.UnitTest
         }
 
         [TestMethod]
-        public void QuickLogger_Log4Net_UnitTest__BaseLog4NetTest__DebugAsync()
+        public void QuickLogger_Log4NetAdapter_UnitTest__BaseLog4NetTest__DebugAsync()
         {
             // Act
             Task task = new Task(() =>
@@ -66,7 +65,7 @@ namespace QuickLogger.Log4Net.UnitTest
 
 
         [TestMethod]
-        public void QuickLogger_Log4Net_UnitTest__BaseLog4NetTest__Info()
+        public void QuickLogger_Log4NetAdapter_UnitTest__BaseLog4NetTest__Info()
         {
             // Act
             Task task = new Task(() =>
@@ -85,7 +84,7 @@ namespace QuickLogger.Log4Net.UnitTest
         }
 
         [TestMethod]
-        public void QuickLogger_Log4Net_UnitTest__BaseLog4NetTest__InfoAsync()
+        public void QuickLogger_Log4NetAdapter_UnitTest__BaseLog4NetTest__InfoAsync()
         {
             // Act
             Task task = new Task(() =>
@@ -105,7 +104,7 @@ namespace QuickLogger.Log4Net.UnitTest
         }
 
         [TestMethod]
-        public void QuickLogger_Log4Net_UnitTest__BaseLog4NetTest__Error_Exception()
+        public void QuickLogger_Log4NetAdapter_UnitTest__BaseLog4NetTest__Error_Exception()
         {
             // Act
             Task task = new Task(() =>
@@ -124,7 +123,7 @@ namespace QuickLogger.Log4Net.UnitTest
         }
 
         [TestMethod]
-        public void QuickLogger_Log4Net_UnitTest__BaseLog4NetTest__ErrorAsync_Exception()
+        public void QuickLogger_Log4NetAdapter_UnitTest__BaseLog4NetTest__ErrorAsync_Exception()
         {
             // Act
             Task task = new Task(() =>
@@ -144,7 +143,7 @@ namespace QuickLogger.Log4Net.UnitTest
         }
 
         [TestMethod]
-        public void QuickLogger_Log4Net_UnitTest__BaseLog4NetTest__Error()
+        public void QuickLogger_Log4NetAdapter_UnitTest__BaseLog4NetTest__Error()
         {
             // Act
             Task task = new Task(() =>
@@ -163,7 +162,7 @@ namespace QuickLogger.Log4Net.UnitTest
         }
 
         [TestMethod]
-        public void QuickLogger_Log4Net_UnitTest__BaseLog4NetTest__ErrorAsync()
+        public void QuickLogger_Log4NetAdapter_UnitTest__BaseLog4NetTest__ErrorAsync()
         {
             // Act
             Task task = new Task(() =>
@@ -183,7 +182,7 @@ namespace QuickLogger.Log4Net.UnitTest
         }
 
         [TestMethod]
-        public void QuickLogger_Log4Net_UnitTest__BaseLog4NetTest__Error_NullParameterForException()
+        public void QuickLogger_Log4NetAdapter_UnitTest__BaseLog4NetTest__Error_NullParameterForException()
         {
             // Act
             Task task = new Task(() =>
@@ -202,7 +201,7 @@ namespace QuickLogger.Log4Net.UnitTest
         }
 
         [TestMethod]
-        public void QuickLogger_Log4Net_UnitTest__BaseLog4NetTest__ErrorAsync_NullParameterForException()
+        public void QuickLogger_Log4NetAdapter_UnitTest__BaseLog4NetTest__ErrorAsync_NullParameterForException()
         {
             // Act
             Task task = new Task(() =>

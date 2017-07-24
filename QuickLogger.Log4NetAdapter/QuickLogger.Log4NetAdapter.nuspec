@@ -2,9 +2,9 @@
 
 <package>
   <metadata>
-    <id>QuickLogger.Log4Net</id>
+    <id>QuickLogger.Log4NetAdapter</id>
     <version>1.0.0</version>
-    <title>QuickLogger.Log4Net</title>
+    <title>QuickLogger.Log4NetAdapter</title>
     <authors>Adem Catamak</authors>
     <owners>Adem Catamak</owners>
     <licenseUrl><![CDATA[https://bitbucket.org/ademcatamak/quicklogger/src/3252db138f14ee1dec42169666c668167d607e63/QuickLogger.Log4Net/LICENCE.txt?at=master&fileviewer=file-view-default]]></licenseUrl>
@@ -21,7 +21,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\QuickLogger.Log4Net.dll" target="lib\net45"></file>
+    <file src="bin\Release\QuickLogger.Log4NetAdapter.dll" target="lib\net45"></file>
     <file src="bin\Release\Content\log4net.config" target="content"></file>
   </files>
 </package>

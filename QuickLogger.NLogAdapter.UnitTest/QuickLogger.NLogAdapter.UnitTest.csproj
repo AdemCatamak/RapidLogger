@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AC4F4396-0BCD-4DA8-B220-96929616C1E0}</ProjectGuid>
+    <ProjectGuid>{4720F290-F003-45E5-BD2E-37798AFD9312}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>QuickLogger.Log4Net.UnitTest</RootNamespace>
-    <AssemblyName>QuickLogger.Log4Net.UnitTest</AssemblyName>
+    <RootNamespace>QuickLogger.NLogAdapter.UnitTest</RootNamespace>
+    <AssemblyName>QuickLogger.NLogAdapter.UnitTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -48,19 +48,19 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LogWrapperTest.cs" />
+    <Compile Include="NLogFileLoggerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="log4net.config">
+    <Content Include="nlog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\QuickLogger.Log4NetAdapter\QuickLogger.Log4NetAdapter.csproj">
-      <Project>{6FD2BAEA-7661-4832-9029-DE67AD8E968F}</Project>
-      <Name>QuickLogger.Log4NetAdapter</Name>
+    <ProjectReference Include="..\QuickLogger.NLogAdapter\QuickLogger.NLogAdapter.csproj">
+      <Project>{C5AB33FC-6F89-43CC-810A-5D0CA6B6AD17}</Project>
+      <Name>QuickLogger.NLogAdapter</Name>
     </ProjectReference>
     <ProjectReference Include="..\QuickLogger\QuickLogger.csproj">
       <Project>{aa3db56f-36e0-4bd2-96fe-05250977519a}</Project>

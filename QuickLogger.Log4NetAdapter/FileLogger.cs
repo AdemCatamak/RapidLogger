@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace QuickLogger.Log4Net
+﻿namespace QuickLogger.Log4NetAdapter
 {
     public class FileLogger : BaseLog4NetLogger
     {
