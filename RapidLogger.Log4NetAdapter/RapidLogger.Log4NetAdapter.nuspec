@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<package>
+  <metadata>
+    <id>RapidLogger.Log4NetAdapter</id>
+    <version>1.0.0</version>
+    <title>RapidLogger.Log4NetAdapter</title>
+    <authors>Adem Catamak</authors>
+    <owners>Adem Catamak</owners>
+    <licenseUrl><![CDATA[https://bitbucket.org/ademcatamak/quicklogger/src/3252db138f14ee1dec42169666c668167d607e63/QuickLogger.Log4Net/LICENCE.txt?at=master&fileviewer=file-view-default]]></licenseUrl>
+    <projectUrl>https://bitbucket.org/ademcatamak/quicklogger/wiki/Home</projectUrl>
+    <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Rapid Logger with Log4Net</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Logger</tags>
+    <dependencies>
+      <dependency id="log4net" version="2.0.8" />
+      <dependency id="RapidLogger" version="1.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\RapidLogger.Log4NetAdapter.dll" target="lib\net45"></file>
+    <file src="bin\Release\Content\log4net.config" target="content"></file>
+  </files>
+</package>
