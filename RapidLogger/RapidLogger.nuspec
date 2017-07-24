@@ -3,7 +3,7 @@
 <package>
   <metadata>
     <id>RapidLogger</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>Rapid Logger</title>
     <authors>Adem Catamak</authors>
     <owners>Adem Catamak</owners>
@@ -17,7 +17,6 @@
     <tags>log,logger,log wrapper</tags>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" />
-      <frameworkAssembly assemblyName="System.Collections.Generic" />
     </frameworkAssemblies>
   </metadata>
   <files>

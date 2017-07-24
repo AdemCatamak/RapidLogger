@@ -3,7 +3,7 @@
 <package>
   <metadata>
     <id>RapidLogger.NLogAdapter</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>RapidLogger.NLogAdapter</title>
     <authors>Adem Catamak</authors>
     <owners>Adem Catamak</owners>
@@ -21,8 +21,6 @@
     </dependencies>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" />
-      <frameworkAssembly assemblyName="System.IO" />
-      <frameworkAssembly assemblyName="System.Threading.Tasks" />
     </frameworkAssemblies>
   </metadata>
   <files>
