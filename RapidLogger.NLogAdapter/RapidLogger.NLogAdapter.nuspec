@@ -3,7 +3,7 @@
 <package>
   <metadata>
     <id>RapidLogger.NLogAdapter</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>RapidLogger.NLogAdapter</title>
     <authors>Adem Catamak</authors>
     <owners>Adem Catamak</owners>
