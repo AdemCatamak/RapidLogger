@@ -19,8 +19,8 @@
       <frameworkAssembly assemblyName="System" />
       <frameworkAssembly assemblyName="System.Collections.Generic" />
     </frameworkAssemblies>
-    <files>
-      <file src="bin\Release\RapidLogger.dll" target="lib\net45"></file>
-    </files>
   </metadata>
+  <files>
+    <file src="bin\Release\RapidLogger.dll" target="lib\net45"></file>
+  </files>
 </package>
