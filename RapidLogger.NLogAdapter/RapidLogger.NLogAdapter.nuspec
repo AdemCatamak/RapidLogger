@@ -17,7 +17,7 @@
     <tags>log,logger,logging,nlog</tags>
     <dependencies>
       <dependency id="NLog" version="4.4.11" />
-      <dependency id="RapidLogger" version="1.0.1" />
+      <dependency id="RapidLogger" version="1.0.2" />
     </dependencies>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" />

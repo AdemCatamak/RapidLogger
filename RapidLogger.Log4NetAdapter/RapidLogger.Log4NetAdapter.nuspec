@@ -17,7 +17,7 @@
     <tags>log,logger,log4net,logging</tags>
     <dependencies>
       <dependency id="log4net" version="2.0.8" />
-      <dependency id="RapidLogger" version="1.0.1" />
+      <dependency id="RapidLogger" version="1.0.2" />
     </dependencies>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" />
