@@ -18,6 +18,7 @@ namespace RapidLogger
             _loggers.Remove(loggerName);
         }
 
+
         public void ActivateLogger(string loggerName)
         {
             ILogEngine logger = _loggers[loggerName];
@@ -37,7 +38,6 @@ namespace RapidLogger
         }
 
 
-
         public void Debug(string message)
         {
             foreach (ILogEngine logger in _loggers.Values)
@@ -47,14 +47,6 @@ namespace RapidLogger
             }
         }
 
-        public void DebugAsync(string message)
-        {
-            foreach (ILogEngine logger in _loggers.Values)
-            {
-                if (logger.IsEnabled)
-                    logger.DebugAsync(message);
-            }
-        }
 
         public void Info(string message)
         {
@@ -65,14 +57,6 @@ namespace RapidLogger
             }
         }
 
-        public void InfoAsync(string message)
-        {
-            foreach (ILogEngine logger in _loggers.Values)
-            {
-                if (logger.IsEnabled)
-                    logger.InfoAsync(message);
-            }
-        }
 
         public void Warning(string message)
         {
@@ -83,14 +67,6 @@ namespace RapidLogger
             }
         }
 
-        public void WarningAsync(string message)
-        {
-            foreach (ILogEngine logger in _loggers.Values)
-            {
-                if (logger.IsEnabled)
-                    logger.WarningAsync(message);
-            }
-        }
 
         public void Error(string message, Exception exception)
         {
@@ -101,30 +77,12 @@ namespace RapidLogger
             }
         }
 
-        public void ErrorAsync(string message, Exception exception)
-        {
-            foreach (ILogEngine logger in _loggers.Values)
-            {
-                if (logger.IsEnabled)
-                    logger.ErrorAsync(message, exception);
-            }
-        }
-
         public void Error(Exception exception)
         {
             foreach (ILogEngine logger in _loggers.Values)
             {
                 if (logger.IsEnabled)
                     logger.Error(exception);
-            }
-        }
-
-        public void ErrorAsync(Exception exception)
-        {
-            foreach (ILogEngine logger in _loggers.Values)
-            {
-                if (logger.IsEnabled)
-                    logger.ErrorAsync(exception);
             }
         }
     }
