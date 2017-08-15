@@ -33,6 +33,9 @@
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="RapidLogger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RapidLogger.1.0.3\lib\net45\RapidLogger.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,20 +52,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="LICENCE.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Content\log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="LICENCE.txt" />
     <None Include="packages.config" />
     <None Include="RapidLogger.Log4NetAdapter.nuspec" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RapidLogger\RapidLogger.csproj">
-      <Project>{AA3DB56F-36E0-4BD2-96FE-05250977519A}</Project>
-      <Name>RapidLogger</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,7 +3,7 @@
 <package>
   <metadata>
     <id>RapidLogger.Log4NetAdapter</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <title>RapidLogger.Log4NetAdapter</title>
     <authors>Adem Catamak</authors>
     <owners>Adem Catamak</owners>
@@ -17,7 +17,7 @@
     <tags>log,logger,log4net,logging</tags>
     <dependencies>
       <dependency id="log4net" version="2.0.8" />
-      <dependency id="RapidLogger" version="1.0.2" />
+      <dependency id="RapidLogger" version="1.0.3" />
     </dependencies>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" />

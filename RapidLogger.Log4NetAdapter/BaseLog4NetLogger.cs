@@ -29,19 +29,9 @@ namespace RapidLogger.Log4NetAdapter
             _logger.Debug(message);
         }
 
-        public void DebugAsync(string message)
-        {
-            Task.Run(() => { Debug(message); });
-        }
-
         public void Info(string message)
         {
             _logger.Info(message);
-        }
-
-        public void InfoAsync(string message)
-        {
-            Task.Run(() => { Info(message); });
         }
 
         public void Warning(string message)
@@ -49,29 +39,14 @@ namespace RapidLogger.Log4NetAdapter
             _logger.Warn(message);
         }
 
-        public void WarningAsync(string message)
-        {
-            Task.Run(() => { Warning(message); });
-        }
-
         public void Error(Exception exception)
         {
             _logger.Error(exception);
         }
 
-        public void ErrorAsync(Exception exception)
-        {
-            Task.Run(() => { Error(exception); });
-        }
-
         public void Error(string message, Exception exception)
         {
             _logger.Error(message, exception);
-        }
-
-        public void ErrorAsync(string message, Exception exception)
-        {
-            Task.Run(() => { Error(message, exception); });
         }
 
 

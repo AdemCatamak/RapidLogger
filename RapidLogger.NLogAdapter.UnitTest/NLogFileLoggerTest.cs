@@ -44,27 +44,6 @@ namespace RapidLogger.NLogAdapter.UnitTest
         }
 
         [TestMethod]
-        public void QuickLogger_NLogAdapter_UnitTest__BaseNLogTest__DebugAsync()
-        {
-            // Act
-            Task task = new Task(() =>
-                                 {
-                                     _logWrapper = new FileLogger(configFilePath);
-                                     _logWrapper.DebugAsync("Some Info");
-                                     Thread.Sleep(1000);
-                                     _logWrapper.Stop();
-                                 });
-            task.Start();
-            task.Wait();
-
-            // Assert
-            string logFileName = DateTime.Now.ToString("yyyy-MM-dd") + "-Debug.log";
-            string logFilePath = $"{_loggerDirectory}\\{logFileName}";
-            Assert.IsTrue(File.Exists(logFilePath));
-        }
-
-
-        [TestMethod]
         public void QuickLogger_NLogAdapter_UnitTest__BaseNLogTest__Info()
         {
             // Act
@@ -72,26 +51,6 @@ namespace RapidLogger.NLogAdapter.UnitTest
                                  {
                                      _logWrapper = new FileLogger(configFilePath);
                                      _logWrapper.Info("Some Info");
-                                     _logWrapper.Stop();
-                                 });
-            task.Start();
-            task.Wait();
-
-            // Assert
-            string logFileName = DateTime.Now.ToString("yyyy-MM-dd") + "-Info.log";
-            string logFilePath = $"{_loggerDirectory}\\{logFileName}";
-            Assert.IsTrue(File.Exists(logFilePath));
-        }
-
-        [TestMethod]
-        public void QuickLogger_NLogAdapter_UnitTest__BaseNLogTest__InfoAsync()
-        {
-            // Act
-            Task task = new Task(() =>
-                                 {
-                                     _logWrapper = new FileLogger(configFilePath);
-                                     _logWrapper.InfoAsync("Some Info");
-                                     Thread.Sleep(1000);
                                      _logWrapper.Stop();
                                  });
             task.Start();
@@ -123,26 +82,6 @@ namespace RapidLogger.NLogAdapter.UnitTest
         }
 
         [TestMethod]
-        public void QuickLogger_NLogAdapter_UnitTest__BaseNLogTest__ErrorAsync_Exception()
-        {
-            // Act
-            Task task = new Task(() =>
-                                 {
-                                     _logWrapper = new FileLogger(configFilePath);
-                                     _logWrapper.ErrorAsync(new Exception("Test exception"));
-                                     Thread.Sleep(1000);
-                                     _logWrapper.Stop();
-                                 });
-            task.Start();
-            task.Wait();
-
-            // Assert
-            string logFileName = DateTime.Now.ToString("yyyy-MM-dd") + "-Error.log";
-            string logFilePath = $"{_loggerDirectory}\\{logFileName}";
-            Assert.IsTrue(File.Exists(logFilePath));
-        }
-
-        [TestMethod]
         public void QuickLogger_NLogAdapter_UnitTest__BaseNLogTest__Error()
         {
             // Act
@@ -162,26 +101,6 @@ namespace RapidLogger.NLogAdapter.UnitTest
         }
 
         [TestMethod]
-        public void QuickLogger_NLogAdapter_UnitTest__BaseNLogTest__ErrorAsync()
-        {
-            // Act
-            Task task = new Task(() =>
-                                 {
-                                     _logWrapper = new FileLogger(configFilePath);
-                                     _logWrapper.ErrorAsync("Some Info", new Exception("Test exception"));
-                                     Thread.Sleep(1000);
-                                     _logWrapper.Stop();
-                                 });
-            task.Start();
-            task.Wait();
-
-            // Assert
-            string logFileName = DateTime.Now.ToString("yyyy-MM-dd") + "-Error.log";
-            string logFilePath = $"{_loggerDirectory}\\{logFileName}";
-            Assert.IsTrue(File.Exists(logFilePath));
-        }
-
-        [TestMethod]
         public void QuickLogger_NLogAdapter_UnitTest__BaseNLogTest__Error_NullParameterForException()
         {
             // Act
@@ -189,26 +108,6 @@ namespace RapidLogger.NLogAdapter.UnitTest
                                  {
                                      _logWrapper = new FileLogger(configFilePath);
                                      _logWrapper.Error("Some Info", null);
-                                     _logWrapper.Stop();
-                                 });
-            task.Start();
-            task.Wait();
-
-            // Assert
-            string logFileName = DateTime.Now.ToString("yyyy-MM-dd") + "-Error.log";
-            string logFilePath = $"{_loggerDirectory}\\{logFileName}";
-            Assert.IsTrue(File.Exists(logFilePath));
-        }
-
-        [TestMethod]
-        public void QuickLogger_NLogAdapter_UnitTest__BaseNLogTest__ErrorAsync_NullParameterForException()
-        {
-            // Act
-            Task task = new Task(() =>
-                                 {
-                                     _logWrapper = new FileLogger(configFilePath);
-                                     _logWrapper.ErrorAsync("Some Info", null);
-                                     Thread.Sleep(1000);
                                      _logWrapper.Stop();
                                  });
             task.Start();
