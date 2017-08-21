@@ -55,7 +55,6 @@
     <Content Include="Content\log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="LICENCE.txt" />
     <None Include="packages.config" />
     <None Include="RapidLogger.Log4NetAdapter.nuspec" />
   </ItemGroup>
