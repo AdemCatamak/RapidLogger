@@ -56,6 +56,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="LICENCE.txt" />
+    <None Include="Install.ps1" />
     <None Include="packages.config" />
     <None Include="RapidLogger.NLogAdapter.nuspec" />
   </ItemGroup>

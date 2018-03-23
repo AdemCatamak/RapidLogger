@@ -3,7 +3,7 @@
 <package>
   <metadata>
     <id>RapidLogger.NLogAdapter</id>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <title>RapidLogger.NLogAdapter</title>
     <authors>Adem Catamak</authors>
     <owners>Adem Catamak</owners>
@@ -26,5 +26,6 @@
   <files>
     <file src="bin\Release\RapidLogger.NLogAdapter.dll" target="lib\net45"></file>
     <file src="bin\Release\Content\nlog.config" target="content"></file>
+    <file src="Install.ps1" target="tools"/>
   </files>
 </package>
