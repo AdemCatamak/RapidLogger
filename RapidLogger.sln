@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1_Solution_Items", "1_Solution_Items", "{11C05297-3AAD-4675-8C8A-441E95D80984}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2_Src", "2_Src", "{E3A72C54-B0BF-423E-9262-4A79867BDFFB}"
 EndProject
@@ -55,5 +58,8 @@ Global
 		{C5AB33FC-6F89-43CC-810A-5D0CA6B6AD17} = {E3A72C54-B0BF-423E-9262-4A79867BDFFB}
 		{D004824E-68B5-4BF0-B91D-C2B4CFABA1D1} = {94111322-3EC1-4513-B4B3-EB8C937455B1}
 		{4720F290-F003-45E5-BD2E-37798AFD9312} = {94111322-3EC1-4513-B4B3-EB8C937455B1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44E06C5B-B90D-4EEE-A8CE-FD4FCFC10E0B}
 	EndGlobalSection
 EndGlobal

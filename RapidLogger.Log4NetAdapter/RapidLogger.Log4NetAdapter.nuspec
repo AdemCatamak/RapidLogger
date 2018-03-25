@@ -3,7 +3,7 @@
 <package>
   <metadata>
     <id>RapidLogger.Log4NetAdapter</id>
-    <version>1.0.5-pre-04</version>
+    <version>1.0.5</version>
     <title>RapidLogger.Log4NetAdapter</title>
     <authors>Adem Catamak</authors>
     <owners>Adem Catamak</owners>
