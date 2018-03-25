@@ -3,7 +3,7 @@
 <package>
   <metadata>
     <id>RapidLogger.Log4NetAdapter</id>
-    <version>1.0.5-pre-01</version>
+    <version>1.0.5-pre-02</version>
     <title>RapidLogger.Log4NetAdapter</title>
     <authors>Adem Catamak</authors>
     <owners>Adem Catamak</owners>
@@ -26,6 +26,6 @@
   <files>
     <file src="bin\Release\RapidLogger.Log4NetAdapter.dll" target="lib\net45"></file>
     <file src="bin\Release\Content\log4net.config" target=""></file>
-    <file src="Install.ps1" target="tools"/>
+    <!--<file src="Install.ps1" target="tools"/>-->
   </files>
 </package>
